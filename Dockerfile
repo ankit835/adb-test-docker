@@ -14,8 +14,8 @@ RUN pip install databricks-cli==0.11.0
 COPY scripts/config.sh /tmp/scripts/config.sh
 
 RUN chmod +x /tmp/scripts/config.sh
-ARG DATABRICKS_TOKEN_MAIN
-ENV DATABRICKS_TOKEN_MAIN=$DATABRICKS_TOKEN_MAIN
+ARG VARIABLE_NAME
+#ENV DATABRICKS_TOKEN_MAIN=$DATABRICKS_TOKEN_MAIN
 RUN /tmp/scripts/config.sh
 
 # ENTRYPOINT ["/tmp/scripts/config.sh"]
