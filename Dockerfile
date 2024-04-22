@@ -3,7 +3,7 @@ FROM ubuntu:20.04
 RUN apt update
 RUN apt clean
 
-ARG USER_ID=117
+ARG USER_ID=108
 ARG GROUP_ID=117
 
 RUN apt-get install -y python3 
