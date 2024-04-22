@@ -15,4 +15,6 @@ RUN pip install databricks-cli==0.11.0
 COPY scripts/config.sh /tmp/scripts/config.sh
 RUN chmod +x /tmp/scripts/config.sh
 
+COPY .databrickscfg ~/.databrickscfg 
+
 # ENTRYPOINT ["/tmp/scripts/config.sh"]
