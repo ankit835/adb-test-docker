@@ -5,8 +5,8 @@ agent none
             }
     
     stages { 
-        agent { dockerfile true }
         stage('deploy') {
+           agent { dockerfile true }
            when { branch 'main' }
             
             steps {  
