@@ -22,7 +22,6 @@ agent {dockerfile true}
                         
                     //  '''  
                          //sh "chmod +x -R ${env.WORKSPACE}" 
-                         sh "whoami"
                          sh "/opt/scripts/config.sh"     
                 // DDL deployment
                      sh '''
