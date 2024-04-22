@@ -3,7 +3,7 @@
 databricksUrl=https://adb-1851930191878659.19.azuredatabricks.net
 databricks configure --token << EOF
 $databricksUrl
-$DATABRICKS_TOKEN_MAIN
+$VARIABLE_NAME
 EOF
 
 databricks workspace list
