@@ -22,7 +22,7 @@ RUN chown -R akusr:akgrp /opt
 RUN chmod -R 755 /home/akusr
 USER akusr
 COPY scripts/config.sh /opt/scripts/config.sh
-RUN chmod +x /opt/scripts/config.sh
+RUN chmod -R a+X /opt/scripts/config.sh
 
 
 #ARG VARIABLE_NAME
