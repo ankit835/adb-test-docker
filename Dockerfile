@@ -7,7 +7,7 @@ ARG USER_ID=1000
 ARG GROUP_ID=1000
 
 RUN groupadd -g $GROUP_ID akgrp && \
-    useradd -u $USER_ID -g akgrp -ms /bin/bash -ms /bin/bash akuser
+    useradd -u $USER_ID -g akgrp -ms /bin/bash -ms /bin/bash akusr
 WORKDIR /opt
 
 RUN chown -R akusr:akgrp /opt
