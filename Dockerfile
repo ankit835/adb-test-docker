@@ -11,7 +11,7 @@ RUN groupadd -g $GROUP_ID akgrp && \
 WORKDIR /opt
 
 RUN chown -R akusr:akgrp /opt
-RUN chmod -R 755 /akusr
+RUN chmod -R 755 /home/akusr
 USER akusr
 
 RUN apt install -y python3 
