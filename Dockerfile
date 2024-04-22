@@ -7,10 +7,11 @@ ARG USER_ID=1000
 ARG GROUP_ID=1000
 
 RUN groupadd -g $GROUP_ID akgrp && \
-    useradd -u $USER_ID -g akusr -ms /bin/bash -ms /bin/bash akuser
+    useradd -u $USER_ID -g akgrp -ms /bin/bash -ms /bin/bash akuser
 WORKDIR /opt
 
 RUN chown -R akusr:akgrp /opt
+RUN chmod -R 755 /akusr
 USER akusr
 
 RUN apt install -y python3 
