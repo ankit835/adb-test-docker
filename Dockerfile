@@ -17,12 +17,12 @@ RUN pip install databricks-cli==0.11.0
 
 RUN groupadd -g $GROUP_ID akgrp && \
     useradd -u $USER_ID -g akgrp -ms /bin/bash -ms /bin/bash akusr
-WORKDIR /opt
-RUN chown -R akusr:akgrp /opt
+WORKDIR /tmp
+RUN chown -R akusr:akgrp /tmp
 RUN chmod -R 755 /home/akusr
 USER akusr
-COPY scripts/config.sh /opt/scripts/config.sh
-RUN chmod -R a+X /opt/scripts/config.sh
+COPY scripts/config.sh /tmp/scripts/config.sh
+RUN chmod -R a+X /tmp/scripts/config.sh
 
 
 #ARG VARIABLE_NAME
