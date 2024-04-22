@@ -7,8 +7,10 @@ agent none
     stages { 
         stage('deploy') {
            agent { dockerfile
+                  {
                   filename 'Dockerfile'
                   args '-e VARIABLE_NAME=${DATABRICKS_TOKEN_MAIN}'
+                  }
                  }
            when { branch 'main' }
             
