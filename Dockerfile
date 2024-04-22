@@ -21,10 +21,10 @@ WORKDIR /opt
 RUN chown -R akusr:akgrp /opt
 RUN chmod -R 755 /home/akusr
 USER akusr
-COPY scripts/config.sh /opt/scripts/config.sh
-USER root
-RUN chmod -R a+X /opt/scripts/config.sh
-USER akusr
+COPY --chmod=755 -R scripts/config.sh /opt/scripts/config.sh
+#USER root
+#RUN chmod -R a+X /opt/scripts/config.sh
+#USER akusr
 
 
 #ARG VARIABLE_NAME
