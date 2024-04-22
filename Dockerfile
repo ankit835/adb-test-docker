@@ -22,9 +22,9 @@ RUN chown -R akusr:akgrp /opt
 RUN chmod -R 755 /home/akusr
 USER akusr
 COPY scripts/config.sh /opt/scripts/config.sh
+RUN chmod +x /opt/scripts/config.sh
 
 
-#RUN chmod +x /tmp/scripts/config.sh
 #ARG VARIABLE_NAME
 #ENV DATABRICKS_TOKEN_MAIN=$DATABRICKS_TOKEN_MAIN
 #RUN /tmp/scripts/config.sh
