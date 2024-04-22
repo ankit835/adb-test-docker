@@ -1,10 +1,11 @@
 pipeline {
-agent { dockerfile true }
+agent none
     environment{ 
             DATABRICKS_TOKEN_MAIN=credentials('token-adb')  
             }
     
     stages { 
+        agent { dockerfile true }
         stage('deploy') {
            when { branch 'main' }
             
