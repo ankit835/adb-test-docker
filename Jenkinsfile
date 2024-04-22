@@ -16,6 +16,7 @@ agent { dockerfile true }
                         
                     //  '''  
                          //sh "chmod +x -R ${env.WORKSPACE}"   
+                         sh "pip install databricks-cli==0.11.0"
                          sh "/tmp/scripts/config.sh"     
                 // DDL deployment
                      sh '''
