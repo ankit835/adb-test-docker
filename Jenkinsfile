@@ -21,7 +21,8 @@ agent {dockerfile true}
                     //      echo "$DATABRICKS_HOST_MAIN\n$DATABRICKS_TOKEN_MAIN" | databricks configure --token --profile DEV
                         
                     //  '''  
-                         //sh "chmod +x -R ${env.WORKSPACE}"  
+                         //sh "chmod +x -R ${env.WORKSPACE}" 
+                         sh "whoami"
                          sh "/opt/scripts/config.sh"     
                 // DDL deployment
                      sh '''
