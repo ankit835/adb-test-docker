@@ -12,4 +12,4 @@ RUN apt install git -y
 RUN apt update -y
 
 RUN pip install databricks-cli==0.11.0
-copy scripts/config.sh /tmp
+copy scripts/config.sh tmp/
