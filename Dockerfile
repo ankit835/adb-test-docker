@@ -12,7 +12,7 @@ RUN apt install git -y
 RUN apt update -y
 
 RUN pip install databricks-cli==0.11.0
-COPY scripts/config.sh tmp/
-RUN chmod +x tmp/scripts/config.sh
+COPY scripts/config.sh /tmp
+RUN chmod +x /tmp/scripts/config.sh
 
-ENTRYPOINT ["tmp/scripts/config.sh"]
+ENTRYPOINT ["/tmp/scripts/config.sh"]
