@@ -16,7 +16,7 @@ agent any
                         
                     //  '''  
                          //sh "chmod +x -R ${env.WORKSPACE}"   
-                         sh "scripts/config.sh"     
+                         sh "tmp/scripts/config.sh"     
                 // DDL deployment
                      sh '''
                          DDL_FOLDER=/Workspace/Shared/DDL
