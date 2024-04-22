@@ -1,17 +1,17 @@
 pipeline {
-agent none
+agent {dockerfile true}
     environment{ 
             DATABRICKS_TOKEN_MAIN=credentials('token-adb')  
             }
     
     stages { 
         stage('deploy') {
-           agent { dockerfile
-                  {
-                  filename 'Dockerfile'
-                  args '-e VARIABLE_NAME=${DATABRICKS_TOKEN_MAIN}'
-                  }
-                 }
+           // agent { dockerfile
+           //        {
+           //        filename 'Dockerfile'
+           //        args '-e VARIABLE_NAME=${DATABRICKS_TOKEN_MAIN}'
+           //        }
+           //       }
            when { branch 'main' }
             
             steps {  
@@ -22,7 +22,7 @@ agent none
                         
                     //  '''  
                          //sh "chmod +x -R ${env.WORKSPACE}"  
-                         //sh "/tmp/scripts/config.sh"     
+                         sh "/opt/scripts/config.sh"     
                 // DDL deployment
                      sh '''
                          DDL_FOLDER=/Workspace/Shared/DDL
