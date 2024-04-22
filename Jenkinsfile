@@ -16,8 +16,7 @@ agent { dockerfile true }
                         
                     //  '''  
                          //sh "chmod +x -R ${env.WORKSPACE}"  
-                         sh "whoami"
-                         sh "/tmp/scripts/config.sh"     
+                         //sh "/tmp/scripts/config.sh"     
                 // DDL deployment
                      sh '''
                          DDL_FOLDER=/Workspace/Shared/DDL
